@@ -29,31 +29,31 @@ writes column by column, in the resulting text file the
 columns of the Julia array will be saved in the rows
 of the text file.
 
-    writefile(A::Vector{\<:Number}, str::String)
+    writefile(A::Vector{<:Number}, str::String)
 
 The vector `A` will be saved in a file denoted by `str`.
     
-    writefile(A::Matrix{\<:Number}, str::String)
+    writefile(A::Matrix{<:Number}, str::String)
 
 The matrix `A` will be saved in a file denoted by `str`.
 
 #### Example
 ```
-julia\> A = [1, 2, 3, 4]
+julia> A = [1, 2, 3, 4]
 4-element Array{Int64,1}:
  1
  2
  3
  4
-julia\>writefile(A, "test.txt")
-shell\> cat test.txt
+julia>writefile(A, "test.txt")
+shell> cat test.txt
 1	2	3	4
 julia> A = reshape(A, 2, 2)
 2×2 Array{Int64,2}:
  1  3
  2  4
-julia\> writefile(A, "test.txt")
-shell\> cat test.txt
+julia> writefile(A, "test.txt")
+shell> cat test.txt
 1	2
 3	4
 ```
@@ -70,10 +70,10 @@ it to the data type given by `dtype`.
 
 #### Example
 ```
-shell\> cat "test.txt"
+shell> cat "test.txt"
 1	2
 3	4
-julia\> readfile("test.txt", Int)
+julia> readfile("test.txt", Int)
 2×2 Array{Int64,2}:
 1  3
 2  4
