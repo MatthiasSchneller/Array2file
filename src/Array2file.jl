@@ -48,6 +48,9 @@ function writefile(A::Matrix{<:Number}, str::String)
 
     # close the io stream
     end
+
+    # return nothing
+    return
 end
 
 
@@ -86,6 +89,9 @@ function writefile(A::Vector{<:Number}, str::String)
 
     # close the file stream
     end
+
+    # return nothing
+    return
 end
 
 
@@ -100,7 +106,7 @@ in the dtype variable.
 
 # Example
 ```
-shell> cat "test.txt"
+shell> cat test.txt
 1	2	
 3	4	
 
