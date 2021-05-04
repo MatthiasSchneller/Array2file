@@ -13,7 +13,7 @@ rows of the data file, and the other way around. This is due to the
 column majorness of julia, but the row majorness of a text file.
 
 # Example
-```
+```jldoctest
 julia> A = reshape([1, 2, 3, 4], 2, 2)
 2×2 Array{Int64,2}:
  1  3
@@ -25,6 +25,8 @@ shell> cat test.txt
 1	2	
 3	4
 ```
+
+See also: [`readfile`](@ref)
 """
 function writefile(A::Matrix{<:Number}, str::String)
     # A     ...   the array that will be saved on disc
@@ -63,12 +65,14 @@ This function will write the Vector A to the file
 located at str.
 
 # Example
-```
+```jldoctest
 julia> writefile([1, 2, 3, 4], "test.txt")
 
 shell> cat test.txt
 1	2	3	4
 ```
+
+See also: [`readfile`](@ref)
 """
 function writefile(A::Vector{<:Number}, str::String)
     # A     ...   the vector that will be saved on disc
@@ -105,7 +109,7 @@ position. The input will be parsed into the DataType that is given
 in the dtype variable.
 
 # Example
-```
+```jldoctest
 shell> cat test.txt
 1	2	
 3	4	
@@ -115,6 +119,8 @@ julia> readfile("test.txt", Int)
  1  3
  2  4
 ```
+
+See also: [`writefile`](@ref)
 """
 function readfile(str::String, dtype::DataType)
     # str     ...   the location of the file that contains the matrix
