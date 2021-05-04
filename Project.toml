@@ -1,4 +1,4 @@
 name = "Array2file"
 uuid = "0d16ada1-b2d8-4069-b398-a6e0ba746cde"
 authors = ["Matthias Schneller <matthias.schneller@gmail.com> "]
-version = "1.0.0"
+version = "1.0.1"
