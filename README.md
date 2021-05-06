@@ -4,17 +4,9 @@ This is a simple script that will save a given Matrix or Vector onto a file,
 and reads it back in again.
 
 ## Installation
-First clone the repository
-```
-/your/path$ git init
-/your/path$ git clone https://github.com/MatthiasSchneller/Array2file.git
-```
-
-Now start Julia, and change to the package environment by typing ']'.
-Install the package using:
 
 ```
-pkg> add Array2file/
+pkg> add https://github.com/MatthiasSchneller/Array2file.git
 ```
 
 ## Usage
